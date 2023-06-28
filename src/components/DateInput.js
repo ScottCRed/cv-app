@@ -1,11 +1,11 @@
 import React from "react";
 
-const Input = ({type, id, placeholder, value}) => {
+const Input = ({type, id, placeholder, value, onDateChange}) => {
     return (
         <div>
           <p>{placeholder}</p>
         <input 
-        onChange={() => console.log('it\'s a date <3')} 
+        onChange={onDateChange} 
         type={type} id={id} 
         value={value}/>
       </div>

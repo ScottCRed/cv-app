@@ -1,10 +1,10 @@
 import React from "react";
 
-const Input = ({type, id, placeholder, value}) => {
+const Input = ({type, id, placeholder, value, onInfoChange}) => {
     return (
         <div>
             <input 
-            onChange={() => console.log(':)')} 
+            onChange={onInfoChange} 
             type={type} 
             id={id} 
             placeholder={placeholder} 
