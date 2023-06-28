@@ -1,8 +1,11 @@
 import React from "react";
 
-function Input () {
+const Input = ({type, id, placeholder, value}) => {
     return (
-        <h2>it's me :)</h2>
+        <div className="App">
+        <h2>Hi it's me :)</h2>
+        <input onChange={() => console.log(':)')} type={type} id={id} placeholder={placeholder} value={value}/>
+      </div>
     )
 }
 

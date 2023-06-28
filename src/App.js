@@ -3,10 +3,7 @@ import Input from './components/Input.js';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hi :)</h1>
-      <Input />
-    </div>
+    <Input type='text' id='firstName' placeholder='First Name' />
   );
 }
 
