@@ -3,16 +3,16 @@ import Button from './Button';
 import DateInput from './DateInput';
 import InfoField from './InfoField'
 
-const Education = (props) => {
-    const {education, setEducation} = props;
+const Employment = (props) => {
+    const {employment, setEmployment} = props;
     
     const onClickOne = (e) => {
-        console.log(education);
+        console.log(employment);
       }
     
       function handleEduChange (e) {
         const { id, value} = e.target;
-        setEducation((prevInfo) => ({
+        setEmployment((prevInfo) => ({
             ...prevInfo,
             [id] : value
         }));
@@ -34,4 +34,4 @@ const Education = (props) => {
     )
 }
 
-export default Education;
+export default Employment;

@@ -1,3 +1,5 @@
+import Education from "./Education";
+import Employment from "./Employment";
 import Personal from "./Personal";
 import { useState } from 'react';
 
@@ -32,6 +34,8 @@ function Main () {
     return (
         <div>
         <Personal personalInfo={personalInfo} setInfo={setInfo}/>
+        <Education education={education} setEducation={setEducation}/>
+        <Employment employment={employment} setEducation={setEmployment}/>
         </div>
     )
 }
