@@ -10,7 +10,24 @@ function Main () {
         phoneNo: '',
         email: '',
         date: '',
-    })
+    });
+
+    const [education, setEducation] = useState({
+        institutionName: '',
+        address: '',
+        degree: '',
+        majors: '',
+        dateStart: '',
+        dateEnd: '',
+    });
+
+    const [employment, setEmployment] = useState({
+        companyName: '',
+        position: '',
+        address: '',
+        dateStart: '',
+        dateEnd: '',
+    });
 
     return (
         <div>
