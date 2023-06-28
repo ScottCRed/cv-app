@@ -2,21 +2,12 @@ import Input from './Input.js';
 import Button from './Button';
 import DateInput from './DateInput';
 import InfoField from './InfoField'
-import { useState } from 'react';
 
-function Personal () {
-    const [personalInfo, setInfo] = useState({
-        firstName: '',
-        surname: '',
-        title: '',
-        address: '',
-        phoneNo: '',
-        email: '',
-        date: '',
-    })
+const Personal = (props) => {
+    const {personalInfo, setInfo} = props;
+    
     const onClickOne = (e) => {
         console.log(personalInfo);
-        
       }
     
       function handleInfoChange (e) {
