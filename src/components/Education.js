@@ -40,6 +40,7 @@ const Education = (props) => {
     }
     return (
         <div>
+            <h2>Education</h2>
             <Input type='text' id='institution' placeholder='Name of Institution' onInfoChange={handleEduChange} value={education.institution}/>
             <Input type='text' id='institutionAddress' placeholder='Address' onInfoChange={handleEduChange} value={education.institutionAddress}/>
             <Input type='text' id='degree' placeholder='Name of Qualification' onInfoChange={handleEduChange} value={education.degree}/>

@@ -18,11 +18,9 @@ const Personal = (props) => {
         }));
       }
       
-      const onClickTwo = (e) => {
-        console.log(e.target.id);
-      }
     return (
         <div>
+          <h2>Personal Information</h2>
             <Input type='text' id='firstName' placeholder='First Name' onInfoChange={handleInfoChange}/>
             <Input type='text' id='surname' placeholder='Surname' onInfoChange={handleInfoChange}/>
             <Input type='text' id='title' placeholder='Title' onInfoChange={handleInfoChange}/>
@@ -30,9 +28,8 @@ const Personal = (props) => {
             <Input type='text' id='phoneNo' placeholder='Phone Number' onInfoChange={handleInfoChange}/>
             <Input type='text' id='email' placeholder='Email Address' onInfoChange={handleInfoChange}/>
             <Input type='text' id='notes' placeholder='Other Notes' onInfoChange={handleInfoChange}/>
-            <DateInput type='date' id='date' placeholder='First date' onDateChange={handleInfoChange}/>
+            <DateInput type='date' id='birthDate' placeholder='Birth Date' onDateChange={handleInfoChange}/>
             <Button onClick={onClickOne} buttonText='Retrieve Info' buttonClass='addButton' id='1'/>
-            {/* <InfoField personalInfo={personalInfo}/> */}
         </div>
 
     )
