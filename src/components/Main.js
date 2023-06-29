@@ -15,13 +15,14 @@ function Main () {
     });
 
     const [education, setEducation] = useState({
-        institutionName: '',
-        address: '',
+        institution: '',
+        institutionAddress: '',
         degree: '',
         majors: '',
-        dateStart: '',
-        dateEnd: '',
+        startDate: '',
+        endDate: '',
     });
+    const [eduInfo, setEduInfo] = ([]);
 
     const [employment, setEmployment] = useState({
         companyName: '',
@@ -30,12 +31,13 @@ function Main () {
         dateStart: '',
         dateEnd: '',
     });
+    const [employInfo, setEmployInfo] = ([]);
 
     return (
         <div>
         <Personal personalInfo={personalInfo} setInfo={setInfo}/>
-        <Education education={education} setEducation={setEducation}/>
-        <Employment employment={employment} setEducation={setEmployment}/>
+        <Education education={education} setEducation={setEducation} setEduInfo={setEduInfo}/>
+        <Employment employment={employment} setEducation={setEmployment} setEmployInfo={setEmployInfo}/>
         </div>
     )
 }
