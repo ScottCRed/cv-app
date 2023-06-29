@@ -10,8 +10,8 @@ const Employment = (props) => {
         companyName: '',
         position: '',
         companyAddress: '',
-        dateStart: '',
-        dateEnd: '',
+        startDate: '',
+        endDate: '',
     }
 
     const initialStateArr = [];
@@ -41,9 +41,9 @@ const Employment = (props) => {
     return (
         <div>
             <h2>Work Experience</h2>
-            <Input type='text' id='companyName' placeholder='Name of Company' onInfoChange={handleEmploymentChange} value={employment.institution}/>
-            <Input type='text' id='position' placeholder='Name of Position Held' onInfoChange={handleEmploymentChange} value={employment.institutionAddress}/>
-            <Input type='text' id='companyAddress' placeholder='Company Address' onInfoChange={handleEmploymentChange} value={employment.degree}/>
+            <Input type='text' id='companyName' placeholder='Name of Company' onInfoChange={handleEmploymentChange} value={employment.companyName}/>
+            <Input type='text' id='position' placeholder='Name of Position Held' onInfoChange={handleEmploymentChange} value={employment.position}/>
+            <Input type='text' id='companyAddress' placeholder='Company Address' onInfoChange={handleEmploymentChange} value={employment.companyAddress}/>
             <DateInput type='date' id='startDate' placeholder='Start Date' onDateChange={handleEmploymentChange} value={employment.startDate}/>
             <DateInput type='date' id='endDate' placeholder='Date of Departure' onDateChange={handleEmploymentChange} value={employment.endDate}/>
             <Button onClick={onAddEmployment} buttonText='Retrieve Info' buttonClass='addButton' id='1'/>
