@@ -32,7 +32,7 @@ const Personal = (props) => {
             <Input type='text' id='notes' placeholder='Other Notes' onInfoChange={handleInfoChange}/>
             <DateInput type='date' id='date' placeholder='First date' onDateChange={handleInfoChange}/>
             <Button onClick={onClickOne} buttonText='Retrieve Info' buttonClass='addButton' id='1'/>
-            <InfoField personalInfo={personalInfo}/>
+            {/* <InfoField personalInfo={personalInfo}/> */}
         </div>
 
     )

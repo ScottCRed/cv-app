@@ -36,8 +36,8 @@ function Main () {
     return (
         <div>
         <Personal personalInfo={personalInfo} setInfo={setInfo}/>
-        <Education education={education} setEducation={setEducation} setEduInfo={setEduInfo}/>
-        <Employment employment={employment} setEducation={setEmployment} setEmployInfo={setEmployInfo}/>
+        <Education education={education} setEducation={setEducation} eduInfo={eduInfo} setEduInfo={setEduInfo}/>
+        <Employment employment={employment} setEducation={setEmployment} employInfo={employInfo} setEmployInfo={setEmployInfo}/>
         </div>
     )
 }
