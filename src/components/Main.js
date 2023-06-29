@@ -43,8 +43,8 @@ function Main () {
             <Employment employment={employment} setEmployment={setEmployment} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/>
             </div>
             <div className="previewWrapper">
-            <PersonalInfoPreview personalInfo={personalInfo}/>
-            <EducationInfoPreview eduInfo={eduInfo}/>
+            {/* <PersonalInfoPreview personalInfo={personalInfo}/> */}
+            <EducationInfoPreview eduInfo={eduInfo} education={education}/>
             </div>
         </div>
 

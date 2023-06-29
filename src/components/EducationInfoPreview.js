@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function EducationInfoPreview (props) {
     const {eduInfo} = props
+    useEffect(() => {
+        console.log(eduInfo);
+    }, [eduInfo]);
     return (
         <div>
-            {Object.entries(eduInfo).map(([key, value]) => {
-                return value != '' ?
-                <p key={key}>{value}</p> :
-                <p key={key}>:)</p>
-            })}
+            {eduInfo.map((item, index)=> {
+                return Object.entries(item).map(([key, value]) => {
+                    return (
+                        <p key={index + key}>{key} : {value}</p>
+                    )})
+                }
+            )}
         </div>
     )
 }
