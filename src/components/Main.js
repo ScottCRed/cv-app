@@ -27,17 +27,17 @@ function Main () {
     const [employment, setEmployment] = useState({
         companyName: '',
         position: '',
-        address: '',
-        dateStart: '',
-        dateEnd: '',
+        companyAddress: '',
+        startDate: '',
+        endDate: '',
     });
-    const [employInfo, setEmployInfo] = useState([]);
+    const [employmentInfo, setEmploymentInfo] = useState([]);
 
     return (
         <div>
         <Personal personalInfo={personalInfo} setInfo={setInfo}/>
         <Education education={education} setEducation={setEducation} eduInfo={eduInfo} setEduInfo={setEduInfo}/>
-        <Employment employment={employment} setEducation={setEmployment} employInfo={employInfo} setEmployInfo={setEmployInfo}/>
+        <Employment employment={employment} setEmployment={setEmployment} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/>
         </div>
     )
 }
