@@ -22,7 +22,7 @@ function Main () {
         startDate: '',
         endDate: '',
     });
-    const [eduInfo, setEduInfo] = ([]);
+    const [eduInfo, setEduInfo] = useState([]);
 
     const [employment, setEmployment] = useState({
         companyName: '',
@@ -31,7 +31,7 @@ function Main () {
         dateStart: '',
         dateEnd: '',
     });
-    const [employInfo, setEmployInfo] = ([]);
+    const [employInfo, setEmployInfo] = useState([]);
 
     return (
         <div>
