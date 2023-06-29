@@ -1,6 +1,7 @@
 import Education from "./Education";
 import Employment from "./Employment";
 import Personal from "./Personal";
+import PersonalInfoPreview from "./PersonalInfoPreview"
 import { useState } from 'react';
 
 function Main () {
@@ -35,10 +36,16 @@ function Main () {
 
     return (
         <div>
-        <Personal personalInfo={personalInfo} setInfo={setInfo}/>
-        <Education education={education} setEducation={setEducation} eduInfo={eduInfo} setEduInfo={setEduInfo}/>
-        <Employment employment={employment} setEmployment={setEmployment} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/>
+            <div className="formWrapper">
+            <Personal personalInfo={personalInfo} setInfo={setInfo}/>
+            <Education education={education} setEducation={setEducation} eduInfo={eduInfo} setEduInfo={setEduInfo}/>
+            <Employment employment={employment} setEmployment={setEmployment} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/>
+            </div>
+            <div className="previewWrapper">
+            <PersonalInfoPreview personalInfo={personalInfo}/>
+            </div>
         </div>
+
     )
 }
 
