@@ -32,7 +32,7 @@ const Education = (props) => {
         console.log(education);
     }
 
-    function clear () {
+    function Clear () {
         setEduInfo(initialStateArr);
         setEducation(initialState);
         console.log(eduInfo);
@@ -47,7 +47,7 @@ const Education = (props) => {
             <DateInput type='date' id='startDate' placeholder='Start Date' onDateChange={handleEduChange} value={education.startDate}/>
             <DateInput type='date' id='endDate' placeholder='Date of completion (current date if still in progress)' onDateChange={handleEduChange} value={education.endDate}/>
             <Button onClick={onAddEdu} buttonText='Retrieve Info' buttonClass='addButton' id='1'/>
-            <Button onClick={clear} buttonText='Clear' buttonClass='clearButton' id='clear'/>
+            <Button onClick={Clear} buttonText='Clear' buttonClass='clearButton' id='clear'/>
         </div>
 
     )
