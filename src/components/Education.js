@@ -1,7 +1,6 @@
 import Input from './Input.js';
 import Button from './Button';
 import DateInput from './DateInput';
-import InfoField from './InfoField'
 
 const Education = (props) => {
     const {education, setEducation, eduInfo, setEduInfo} = props;
@@ -14,6 +13,8 @@ const Education = (props) => {
         startDate: '',
         endDate: '',
     }
+
+    const initialStateArr = [];
     
     function handleEduChange (e) {
     const { id, value} = e.target;
@@ -30,6 +31,13 @@ const Education = (props) => {
         console.log(eduInfo);
         console.log(education);
     }
+
+    function clear () {
+        setEduInfo(initialStateArr);
+        setEducation(initialState);
+        console.log(eduInfo);
+        console.log(education);
+    }
     return (
         <div>
             <Input type='text' id='institution' placeholder='Name of Institution' onInfoChange={handleEduChange} value={education.institution}/>
@@ -39,6 +47,7 @@ const Education = (props) => {
             <DateInput type='date' id='startDate' placeholder='Start Date' onDateChange={handleEduChange} value={education.startDate}/>
             <DateInput type='date' id='endDate' placeholder='Date of completion (current date if still in progress)' onDateChange={handleEduChange} value={education.endDate}/>
             <Button onClick={onAddEdu} buttonText='Retrieve Info' buttonClass='addButton' id='1'/>
+            <Button onClick={clear} buttonText='Clear' buttonClass='clearButton' id='clear'/>
         </div>
 
     )
