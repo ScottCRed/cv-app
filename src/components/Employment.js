@@ -1,7 +1,7 @@
 import Input from './Input.js';
 import Button from './Button';
 import DateInput from './DateInput';
-import InfoField from './InfoField'
+import InfoField from './EducationInfoPreview.js'
 
 const Employment = (props) => {
     const {employment, setEmployment, employmentInfo, setEmploymentInfo} = props;

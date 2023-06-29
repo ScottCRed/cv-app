@@ -1,10 +1,10 @@
 import React from "react";
 
-function InfoField (props) {
-    const {personalInfo} = props
+function EducationInfoPreview (props) {
+    const {eduInfo} = props
     return (
         <div>
-            {Object.entries(personalInfo).map(([key, value]) => {
+            {Object.entries(eduInfo).map(([key, value]) => {
                 return value != '' ?
                 <p key={key}>{value}</p> :
                 <p key={key}>:)</p>
@@ -13,4 +13,4 @@ function InfoField (props) {
     )
 }
 
-export default InfoField;
+export default EducationInfoPreview;

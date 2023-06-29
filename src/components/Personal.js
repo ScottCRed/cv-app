@@ -1,7 +1,6 @@
 import Input from './Input.js';
 import Button from './Button';
 import DateInput from './DateInput';
-import InfoField from './InfoField'
 
 const Personal = (props) => {
     const {personalInfo, setInfo} = props;

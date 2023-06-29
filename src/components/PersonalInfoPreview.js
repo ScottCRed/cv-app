@@ -1,6 +1,6 @@
 import React from "react";
 
-function InfoField (props) {
+function PersonalInfoPreview(props) {
     const {personalInfo} = props;
     let dob = new Date(personalInfo.birthDate);
     let monthDiff = Date.now() - dob;
@@ -21,4 +21,4 @@ function InfoField (props) {
     )
 }
 
-export default InfoField;
+export default PersonalInfoPreview;
