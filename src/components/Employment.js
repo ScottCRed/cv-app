@@ -4,33 +4,51 @@ import DateInput from './DateInput';
 import InfoField from './InfoField'
 
 const Employment = (props) => {
-    const {employment, setEmployment} = props;
+    const {employment, setEmployment, employmentInfo, setEmploymentInfo} = props;
     
-    const onClickOne = (e) => {
-        console.log(employment);
-      }
+    const initialState ={
+        companyName: '',
+        position: '',
+        companyAddress: '',
+        dateStart: '',
+        dateEnd: '',
+    }
+
+    const initialStateArr = [];
     
-      function handleEduChange (e) {
-        const { id, value} = e.target;
-        setEmployment((prevInfo) => ({
-            ...prevInfo,
-            [id] : value
+    function handleEmploymentChange (e) {
+    const { id, value} = e.target;
+    setEmployment((prevInfo) => ({
+        ...prevInfo,
+        [id] : value
         }));
-      }
+    }
+    const onAddEmployment = (e) => {
+        e.preventDefault();
+
+        setEmploymentInfo(employmentInfo.concat(employment));
+        setEmployment(initialState);
+        console.log(employmentInfo);
+        console.log(employment);
+    }
+
+    function Clear () {
+        setEmploymentInfo(initialStateArr);
+        setEmployment(initialState);
+        console.log(employment);
+        console.log(employmentInfo);
+    }
     return (
         <div>
-            {/* <Input type='text' id='firstName' placeholder='First Name' onInfoChange={handleInfoChange}/>
-            <Input type='text' id='surname' placeholder='Surname' onInfoChange={handleInfoChange}/>
-            <Input type='text' id='title' placeholder='Title' onInfoChange={handleInfoChange}/>
-            <Input type='text' id='address' placeholder='Address' onInfoChange={handleInfoChange}/>
-            <Input type='text' id='phoneNo' placeholder='Phone Number' onInfoChange={handleInfoChange}/>
-            <Input type='text' id='email' placeholder='Email Address' onInfoChange={handleInfoChange}/>
-            <Input type='text' id='notes' placeholder='Other Notes' onInfoChange={handleInfoChange}/>
-            <DateInput type='date' id='date' placeholder='First date' onDateChange={handleInfoChange}/>
-            <Button onClick={onClickOne} buttonText='Retrieve Info' buttonClass='addButton' id='1'/>
-            <InfoField personalInfo={personalInfo}/> */}
+            <h2>Work Experience</h2>
+            <Input type='text' id='companyName' placeholder='Name of Company' onInfoChange={handleEmploymentChange} value={employment.institution}/>
+            <Input type='text' id='position' placeholder='Name of Position Held' onInfoChange={handleEmploymentChange} value={employment.institutionAddress}/>
+            <Input type='text' id='companyAddress' placeholder='Company Address' onInfoChange={handleEmploymentChange} value={employment.degree}/>
+            <DateInput type='date' id='startDate' placeholder='Start Date' onDateChange={handleEmploymentChange} value={employment.startDate}/>
+            <DateInput type='date' id='endDate' placeholder='Date of Departure' onDateChange={handleEmploymentChange} value={employment.endDate}/>
+            <Button onClick={onAddEmployment} buttonText='Retrieve Info' buttonClass='addButton' id='1'/>
+            <Button onClick={Clear} buttonText='Clear' buttonClass='clearButton' id='clear'/>
         </div>
-
     )
 }
 
