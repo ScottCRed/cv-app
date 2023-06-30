@@ -3,6 +3,7 @@ import Employment from "./Employment";
 import Personal from "./Personal";
 import PersonalInfoPreview from "./PersonalInfoPreview"
 import EducationInfoPreview  from "./EducationInfoPreview"
+import EmploymentInfoPreview from "./EmploymentInfoPreview";
 import { useState } from 'react';
 
 function Main () {
@@ -44,7 +45,8 @@ function Main () {
             </div>
             <div className="previewWrapper">
             <PersonalInfoPreview personalInfo={personalInfo}/>
-            <EducationInfoPreview eduInfo={eduInfo} education={education}/>
+            <EducationInfoPreview eduInfo={eduInfo} />
+            <EmploymentInfoPreview employmentInfo={employmentInfo} />
             </div>
         </div>
 
