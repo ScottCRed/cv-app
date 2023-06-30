@@ -36,14 +36,14 @@ function Main () {
     const [employmentInfo, setEmploymentInfo] = useState([]);
 
     return (
-        <div>
+        <div className="mainWrapper">
             <div className="formWrapper">
             <Personal personalInfo={personalInfo} setInfo={setInfo}/>
             <Education education={education} setEducation={setEducation} eduInfo={eduInfo} setEduInfo={setEduInfo}/>
             <Employment employment={employment} setEmployment={setEmployment} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/>
             </div>
             <div className="previewWrapper">
-            {/* <PersonalInfoPreview personalInfo={personalInfo}/> */}
+            <PersonalInfoPreview personalInfo={personalInfo}/>
             <EducationInfoPreview eduInfo={eduInfo} education={education}/>
             </div>
         </div>
