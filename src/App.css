@@ -1,14 +1,23 @@
+body {
+    margin: 0;
+}
+
 .mainWrapper {
     display: flex;
     background-color: bisque;
+    margin: 0px;
 }
 
 .formWrapper {
     background-color: rgb(177, 177, 208);
     margin: 5px;
+    padding: 5px;
+    width: 650px;
 }
 
 .previewWrapper {
     background-color: rgb(177, 205, 208);
     margin: 5px;
+    padding: 5px;
+    width: 650px;
 }
