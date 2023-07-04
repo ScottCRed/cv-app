@@ -21,3 +21,7 @@ body {
     padding: 5px;
     width: 650px;
 }
+
+.infoCard {
+    background-color: yellow;
+}
