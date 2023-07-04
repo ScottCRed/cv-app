@@ -8,14 +8,16 @@ function EducationInfoPreview (props) {
     }, [eduInfo]);
     return (
         <div>
-          {eduInfo.map((item, index) => {
+          {eduInfo.map((item, index,) => {
             return (
-              <div key={index}>
-                {Object.entries(item).map(([key, value]) => (
-                  <p key={key}>
-                    {key} : {value}
-                  </p>
-                ))}
+              <div key={index}>                
+                <p key={"institution"}>Name of Institution: {item.institution}</p>
+                <p key={"address"}>Address of Institution: {item.institutionAddress}</p>
+                <p key={"degree"}>Name of Degree: {item.degree}</p>
+                <p key={"majors"}>Major(s): {item.majors}</p>
+                <p key={"start"}>Start Date: {item.startDate}</p>
+                <p key={"end"}>End Date: {item.endDate}</p>
+                
                 <Button buttonText="Edit Institution" buttonClass="btnEdit" />
                 <Button buttonText="Delete Institution" buttonClass="btnDelete" />
               </div>
