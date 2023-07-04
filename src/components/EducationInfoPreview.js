@@ -10,7 +10,7 @@ function EducationInfoPreview (props) {
         <div>
           {eduInfo.map((item, index,) => {
             return (
-              <div key={index}>                
+              <div key={index} className="infoCard">     
                 <p key={"institution"}>Name of Institution: {item.institution}</p>
                 <p key={"address"}>Address of Institution: {item.institutionAddress}</p>
                 <p key={"degree"}>Name of Degree: {item.degree}</p>

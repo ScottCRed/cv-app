@@ -11,7 +11,7 @@ function EmploymentInfoPreview (props) {
         <div>
           {employmentInfo.map((item, index) => {
             return (
-              <div key={index}>
+              <div key={index} className="infoCard">
                 <p key={"institution"}>Name of Company: {item.companyName}</p>
                 <p key={"address"}>Address of Company: {item.companyAddress}</p>
                 <p key={"degree"}>Name of Position Held: {item.position}</p>
