@@ -4,7 +4,7 @@ import Button from "./Button";
 function EducationInfoPreview (props) {
     const {eduInfo} = props
     useEffect(() => {
-        console.log(eduInfo);
+
     }, [eduInfo]);
     return (
         <div>
