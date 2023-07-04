@@ -45,7 +45,7 @@ function Main () {
     const deleteEducation = (e) => {      
         const eduId = parseInt(e.target.id);
         const updatedEduInfo = eduInfo.filter((employment, index) => index !==eduId);
-        setEmploymentInfo(updatedEduInfo);
+        setEduInfo(updatedEduInfo);
     }
 
     return (
@@ -57,7 +57,7 @@ function Main () {
             </div>
             <div className="previewWrapper">
             <PersonalInfoPreview personalInfo={personalInfo}/>
-            <EducationInfoPreview eduInfo={eduInfo} />
+            <EducationInfoPreview eduInfo={eduInfo} deleteClick={deleteEducation}/>
             <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment}/>
             </div>
         </div>
