@@ -4,18 +4,19 @@ import Button from "./Button";
 function EmploymentInfoPreview (props) {
     const {employmentInfo} = props
     useEffect(() => {
-        console.log(employmentInfo);
+
     }, [employmentInfo]);
     return (
         <div>
           {employmentInfo.map((item, index) => {
             return (
               <div key={index}>
-                {Object.entries(item).map(([key, value]) => (
-                  <p key={key}>
-                    {key} : {value}
-                  </p>
-                ))}
+                <p key={"institution"}>Name of Company: {item.companyName}</p>
+                <p key={"address"}>Address of Company: {item.companyAddress}</p>
+                <p key={"degree"}>Name of Position Held: {item.position}</p>
+                <p key={"start"}>Start Date: {item.startDate}</p>
+                <p key={"end"}>End Date: {item.endDate}</p>
+
                 <Button buttonText="Edit Institution" buttonClass="btnEdit" />
                 <Button buttonText="Delete Institution" buttonClass="btnDelete" />
               </div>
