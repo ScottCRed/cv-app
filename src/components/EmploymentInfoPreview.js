@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import Button from "./Button";
 
 function EmploymentInfoPreview (props) {
-    const {employmentInfo} = props
+    const {employmentInfo, deleteClick} = props
     useEffect(() => {
 
     }, [employmentInfo]);
+
     return (
         <div>
           {employmentInfo.map((item, index) => {
@@ -18,7 +19,7 @@ function EmploymentInfoPreview (props) {
                 <p key={"end"}>End Date: {item.endDate}</p>
 
                 <Button buttonText="Edit Institution" buttonClass="btnEdit" />
-                <Button buttonText="Delete Institution" buttonClass="btnDelete" />
+                <Button buttonText="Delete Institution" buttonClass="btnDelete" onClick={deleteClick} id={index} />
               </div>
             );
           })}
