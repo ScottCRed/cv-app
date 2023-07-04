@@ -36,6 +36,18 @@ function Main () {
     });
     const [employmentInfo, setEmploymentInfo] = useState([]);
 
+    const deleteEmployment = (e) => {      
+        const employmentId = parseInt(e.target.id);
+        const updatedEmploymentInfo = employmentInfo.filter((employment, index) => index !==employmentId);
+        setEmploymentInfo(updatedEmploymentInfo);
+      };
+
+    const deleteEducation = (e) => {      
+        const eduId = parseInt(e.target.id);
+        const updatedEduInfo = eduInfo.filter((employment, index) => index !==eduId);
+        setEmploymentInfo(updatedEduInfo);
+    }
+
     return (
         <div className="mainWrapper">
             <div className="formWrapper">
@@ -46,7 +58,7 @@ function Main () {
             <div className="previewWrapper">
             <PersonalInfoPreview personalInfo={personalInfo}/>
             <EducationInfoPreview eduInfo={eduInfo} />
-            <EmploymentInfoPreview employmentInfo={employmentInfo} />
+            <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment}/>
             </div>
         </div>
 
