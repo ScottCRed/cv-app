@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Button from "./Button";
 
 function EducationInfoPreview (props) {
-    const {eduInfo} = props
+    const {eduInfo, deleteClick} = props
     useEffect(() => {
 
     }, [eduInfo]);
@@ -19,7 +19,7 @@ function EducationInfoPreview (props) {
                 <p key={"end"}>End Date: {item.endDate}</p>
                 
                 <Button buttonText="Edit Institution" buttonClass="btnEdit" />
-                <Button buttonText="Delete Institution" buttonClass="btnDelete" />
+                <Button buttonText="Delete Institution" buttonClass="btnDelete" onClick={deleteClick} id={index} />
               </div>
             );
           })}
