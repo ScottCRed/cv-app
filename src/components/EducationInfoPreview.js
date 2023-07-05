@@ -12,7 +12,14 @@ function EducationInfoPreview (props) {
           <h3>Education</h3>
           {eduInfo.map((item, index) => {
             return editState === index ?
-            <EditEducation key="edit" handleEdit={handleEdit} education={item} index={index} eduInfo={eduInfo} setEduInfo={setEduInfo}/> :
+            <EditEducation 
+            key="edit" 
+            handleEdit={handleEdit} 
+            education={item} 
+            index={index} 
+            eduInfo={eduInfo} 
+            setEduInfo={setEduInfo}/> :
+            
               <div key={index} className="infoCard"> 
                 <table className="previewTbl">
                   <tbody>
@@ -46,8 +53,7 @@ function EducationInfoPreview (props) {
                   </tbody>
                 </table>           
               </div>
-            
-          })}
+          })};
           <div className="line"/>
         </div>
       );

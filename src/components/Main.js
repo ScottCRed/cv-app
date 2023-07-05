@@ -90,15 +90,45 @@ function Main () {
         <div className="mainWrapper">
             <div className="formWrapper">
             <Personal personalInfo={personalInfo} setInfo={setInfo} />
-            <Education education={education} setEducation={setEducation} eduInfo={eduInfo} setEduInfo={setEduInfo}/>
-            <Employment employment={employment} setEmployment={setEmployment} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/>
-            <Button onClick={reset} buttonText="Reset" buttonClass="btnReset" id="reset"/>
+
+            <Education 
+            education={education} 
+            setEducation={setEducation} 
+            eduInfo={eduInfo} 
+            setEduInfo={setEduInfo}/>
+
+            <Employment 
+            employment={employment} 
+            setEmployment={setEmployment} 
+            employmentInfo={employmentInfo} 
+            setEmploymentInfo={setEmploymentInfo}/>
+            
+            <Button 
+            onClick={reset} 
+            buttonText="Reset" 
+            buttonClass="btnReset" 
+            id="reset"/>
+
             </div>
             <div className="previewWrapper">
             <Header className="secondary" id="header" title="Cirriculum Vitae"/>
             <PersonalInfoPreview personalInfo={personalInfo}/>
-            <EducationInfoPreview eduInfo={eduInfo} deleteClick={deleteEducation} onEdit={onEduEdit} handleEdit={handleEduEdit} editState={editEduState} setEduInfo={setEduInfo}/>
-            <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment} onEdit={onEmploymentEdit} handleEdit={handleEmployEdit} editState={editEmployState} setEmploymentInfo={setEmploymentInfo}/>
+
+            <EducationInfoPreview 
+            eduInfo={eduInfo} 
+            deleteClick={deleteEducation} 
+            onEdit={onEduEdit} 
+            handleEdit={handleEduEdit} 
+            editState={editEduState} 
+            setEduInfo={setEduInfo}/>
+
+            <EmploymentInfoPreview 
+            employmentInfo={employmentInfo} 
+            deleteClick={deleteEmployment} 
+            onEdit={onEmploymentEdit} 
+            handleEdit={handleEmployEdit} 
+            editState={editEmployState} s
+            etEmploymentInfo={setEmploymentInfo}/>
             </div>
         </div>
         <Footer className="footer" content="Created by Scott Carroll 2023"/>

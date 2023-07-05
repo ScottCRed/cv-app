@@ -37,12 +37,46 @@ const Employment = (props) => {
     return (
         <div>
             <h3>Work Experience</h3>
-            <Input type='text' id='companyName' placeholder='Name of Company' onInfoChange={handleEmploymentChange} value={employment.companyName}/>
-            <Input type='text' id='position' placeholder='Name of Position Held' onInfoChange={handleEmploymentChange} value={employment.position}/>
-            <Input type='text' id='companyAddress' placeholder='Company Address' onInfoChange={handleEmploymentChange} value={employment.companyAddress}/>
-            <DateInput type='date' id='startDate' placeholder='Start Date' onDateChange={handleEmploymentChange} value={employment.startDate}/>
-            <DateInput type='date' id='endDate' placeholder='Date of Departure' onDateChange={handleEmploymentChange} value={employment.endDate}/>
-            <Button onClick={onAddEmployment} buttonText='Add' buttonClass='btnAdd' id='1'/>
+            <Input 
+            type='text' 
+            id='companyName' 
+            placeholder='Name of Company' 
+            onInfoChange={handleEmploymentChange} 
+            value={employment.companyName}/>
+
+            <Input 
+            type='text' 
+            id='position' 
+            placeholder='Name of Position Held' 
+            onInfoChange={handleEmploymentChange} 
+            value={employment.position}/>
+
+            <Input 
+            type='text' 
+            id='companyAddress' 
+            placeholder='Company Address' 
+            onInfoChange={handleEmploymentChange} 
+            value={employment.companyAddress}/>
+
+            <DateInput 
+            type='date' 
+            id='startDate' 
+            placeholder='Start Date' 
+            onDateChange={handleEmploymentChange} 
+            value={employment.startDate}/>
+
+            <DateInput 
+            type='date' 
+            id='endDate' 
+            placeholder='Date of Departure' 
+            onDateChange={handleEmploymentChange}
+            value={employment.endDate}/>
+
+            <Button 
+            onClick={onAddEmployment} 
+            buttonText='Add' 
+            buttonClass='btnAdd' 
+            id='1'/>
         </div>
     )
 }
