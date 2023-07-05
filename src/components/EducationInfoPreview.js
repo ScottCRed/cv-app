@@ -17,16 +17,16 @@ function EducationInfoPreview (props) {
                 <table className="previewTbl">
                   <tbody>
                     <tr>
-                      <td style={{'width': '35%'}}>Start Date: {item.startDate}</td>
+                      <td style={{'width': '35%'}}><b>Start Date:</b>  {item.startDate}</td>
                       <td>{item.institution}, {item.institutionAddress} </td>
                     </tr>
                     <tr>
-                      <td>Completed: {item.endDate}</td>
-                      <td>Degree: {item.degree}</td>
+                      <td><b>Completed:</b>  {item.endDate}</td>
+                      <td><b>Degree:</b>  {item.degree}</td>
                     </tr>
                     <tr>
                       <td></td>
-                      <td>Majors: {item.majors} </td>
+                      <td><b>Majors</b>  {item.majors} </td>
                     </tr>
                     <tr>
                       <td>
