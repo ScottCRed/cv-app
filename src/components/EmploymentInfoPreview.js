@@ -9,21 +9,46 @@ function EmploymentInfoPreview (props) {
     }, [employmentInfo]);
 
     return (
-        <div>
+      <div className="preview">
+      <h3>Employment</h3>
           {employmentInfo.map((item, index) => {
             return editState === index ?
             <EditEmployment  key="edit" handleEdit={handleEdit} employment={item} index={index} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/> :
               <div key={index} className="infoCard">
-                <p key={"position"}>Name of Position Held: {item.position}</p>
-                <p key={"companyName"}>Name of Company: {item.companyName}</p>
-                <p key={"companyAddress"}>Address of Company: {item.companyAddress}</p>
-                <p key={"start"}>Start Date: {item.startDate}</p>
-                <p key={"end"}>End Date: {item.endDate}</p>
-
-                <Button id={index} buttonText="Edit Institution" buttonClass="btnEdit" onClick={onEdit}/>
-                <Button id={index} buttonText="Delete Institution" buttonClass="btnDelete" onClick={deleteClick} />
+                <table className="previewTbl">
+                  <tbody>
+                    <tr>
+                      <td style={{'width': '35%'}}><b>Start Date:</b> {item.startDate}</td>
+                      <td>{item.companyName}, {item.companyAddress} </td>
+                    </tr>
+                    <tr>
+                      <td><b>Completed:</b> {item.endDate}</td>
+                      <td><b>Position:</b> {item.position}</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <Button 
+                        id={index} 
+                        buttonText="Edit" 
+                        buttonClass="btnEdit" 
+                        onClick={onEdit}/>
+                        <Button 
+                        id={index} 
+                        buttonText="Delete" 
+                        buttonClass="btnDelete" 
+                        onClick={deleteClick} />
+                        </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table> 
               </div>
           })}
+          <div className="line"/>
         </div>
       );
     }

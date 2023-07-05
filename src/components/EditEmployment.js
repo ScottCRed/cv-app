@@ -12,14 +12,37 @@ function EditEmployment (props) {
         setEmploymentInfo(updatedEmploymentInfo);
     };
     return (
-        <div className="infoCard" key={index}>
-        <p key={"position"}>Position Held: <input type="text" name="position" value={employment.position} onChange={handleNewInput}/></p> 
-        <p key={"companyName"}>Name of Company: <input type="text" name="companyName" value={employment.companyName} onChange={handleNewInput}/></p> 
-        <p key={"companyAddress"}>Address of Company: <input type="text" name="companyAddress" value={employment.companyAddress} onChange={handleNewInput}/></p> 
-        <p key={"start"}>Start Date: <input type="date" name="startDate" value={employment.startDate} onChange={handleNewInput}/></p> 
-        <p key={"end"}>End Date: <input type="date" name="endDate" value={employment.endDate} onChange={handleNewInput}/></p> 
-        
-        <Button buttonText="Update Employment" buttonClass="btnEdit" onClick={handleEdit}/>
+        <div className="infoCard" key={index}>        
+        <table className="previewTbl">
+            <tbody>
+            <tr>
+                <td style={{'width': '35%'}}>Start Date: 
+                <input type="date" name="startDate" id="editInput" value={employment.startDate} onChange={handleNewInput}/></td>
+                <td>
+                <input type="text" name="company" id="editInput" value={employment.companyName} onChange={handleNewInput}/>, 
+                <input type="text" name="companyAddress" id="editInput" value={employment.companyAddress} onChange={handleNewInput}/></td>
+            </tr>
+            <tr>
+                <td>Completed: 
+                <input type="date" name="endDate" id="editInput" value={employment.endDate} onChange={handleNewInput}/></td>
+                <td>Position: 
+                <input type="text" name="position" id="editInput" value={employment.position} onChange={handleNewInput}/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                <Button 
+                buttonText="Update" 
+                buttonClass="btnEdit" 
+                onClick={handleEdit}/>
+                </td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table> 
       </div>
     )
 }
