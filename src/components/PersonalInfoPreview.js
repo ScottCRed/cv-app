@@ -4,12 +4,12 @@ function PersonalInfoPreview(props) {
     const {personalInfo} = props;
 
     return (
-        <div className="personalInfoWrapper">          
-            <table className="personalTbl">
-                <thead><h3>Personal Information</h3></thead>
+        <div className="preview"> 
+        <h3>Personal Information</h3>         
+            <table className="previewTbl">
                 <tbody>
                 <tr>
-                    <td style={{'width': '30%'}}><b>First Name </b></td>
+                    <td style={{'width': '35%'}}><b>First Name </b></td>
                     <td>{personalInfo.firstName}</td>
                 </tr>
                 <tr>
@@ -38,7 +38,7 @@ function PersonalInfoPreview(props) {
                 </tr>
                 </tbody>                
             </table>
-            <div className="break"></div>
+            <div className="line"/>
         </div>
     )
 }
