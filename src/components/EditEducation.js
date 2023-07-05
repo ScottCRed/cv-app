@@ -13,14 +13,37 @@ function EditEducation (props) {
     };
     return (
         <div className="infoCard" key={index}>
-        <p key={"institution"}>Name of Institution: <input type="text" name="institution" value={education.institution} onChange={handleNewInput}/></p> 
-        <p key={"address"}>Address of Institution: <input type="text" name="institutionAddress" value={education.institutionAddress} onChange={handleNewInput}/></p> 
-        <p key={"degree"}>Name of Degree: <input type="text" name="degree" value={education.degree} onChange={handleNewInput}/></p> 
-        <p key={"majors"}>Major(s): <input type="text" name="majors" value={education.majors} onChange={handleNewInput}/></p> 
-        <p key={"start"}>Start Date: <input type="date" name="startDate" value={education.startDate} onChange={handleNewInput}/></p> 
-        <p key={"end"}>End Date: <input type="date" name="endDate" value={education.endDate} onChange={handleNewInput}/></p> 
-        
-        <Button buttonText="Update Institution" buttonClass="btnEdit" onClick={handleEdit}/>
+        <table className="previewTbl">
+                  <tbody>
+                    <tr>
+                      <td style={{'width': '35%'}}>Start Date: 
+                      <input type="date" name="startDate" id="editInput" value={education.startDate} onChange={handleNewInput}/></td>
+                      <td>
+                        <input type="text" name="institution" id="editInput" value={education.institution} onChange={handleNewInput}/>, 
+                        <input type="text" name="institutionAddress" id="editInput" value={education.institutionAddress} onChange={handleNewInput}/></td>
+                    </tr>
+                    <tr>
+                      <td>Completed: 
+                        <input type="date" name="endDate" id="editInput" value={education.endDate} onChange={handleNewInput}/></td>
+                      <td>Degree: 
+                        <input type="text" name="degree" id="editInput" value={education.degree} onChange={handleNewInput}/></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>Majors: 
+                        <input type="text" name="majors" id="editInput" value={education.majors} onChange={handleNewInput}/></td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <Button 
+                      buttonText="Update" 
+                      buttonClass="btnEdit" 
+                      onClick={handleEdit}/>
+                        </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table> 
       </div>
     )
 }

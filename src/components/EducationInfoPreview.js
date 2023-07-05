@@ -22,7 +22,7 @@ function EducationInfoPreview (props) {
                     </tr>
                     <tr>
                       <td>Completed: {item.endDate}</td>
-                      <td>Degree: {item.degree} in {item.majors} </td>
+                      <td>Degree: {item.degree}</td>
                     </tr>
                     <tr>
                       <td></td>
