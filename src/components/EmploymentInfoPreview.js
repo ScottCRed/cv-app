@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import Button from "./Button";
+import EditEmployment from "./EditEmployment";
 
 function EmploymentInfoPreview (props) {
-    const {employmentInfo, deleteClick} = props
+    const {employmentInfo, deleteClick, onEdit, handleEdit, editState, setEmploymentInfo } = props
     useEffect(() => {
 
     }, [employmentInfo]);
@@ -10,18 +11,18 @@ function EmploymentInfoPreview (props) {
     return (
         <div>
           {employmentInfo.map((item, index) => {
-            return (
+            return editState === index ?
+            <EditEmployment  key="edit" handleEdit={handleEdit} employment={item} index={index} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/> :
               <div key={index} className="infoCard">
-                <p key={"institution"}>Name of Company: {item.companyName}</p>
-                <p key={"address"}>Address of Company: {item.companyAddress}</p>
-                <p key={"degree"}>Name of Position Held: {item.position}</p>
+                <p key={"position"}>Name of Position Held: {item.position}</p>
+                <p key={"companyName"}>Name of Company: {item.companyName}</p>
+                <p key={"companyAddress"}>Address of Company: {item.companyAddress}</p>
                 <p key={"start"}>Start Date: {item.startDate}</p>
                 <p key={"end"}>End Date: {item.endDate}</p>
 
-                <Button buttonText="Edit Institution" buttonClass="btnEdit" />
-                <Button buttonText="Delete Institution" buttonClass="btnDelete" onClick={deleteClick} id={index} />
+                <Button id={index} buttonText="Edit Institution" buttonClass="btnEdit" onClick={onEdit}/>
+                <Button id={index} buttonText="Delete Institution" buttonClass="btnDelete" onClick={deleteClick} />
               </div>
-            );
           })}
         </div>
       );

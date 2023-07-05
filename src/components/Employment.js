@@ -28,15 +28,11 @@ const Employment = (props) => {
 
         setEmploymentInfo(employmentInfo.concat(employment));
         setEmployment(initialState);
-        console.log(employmentInfo);
-        console.log(employment);
     }
 
     function Clear () {
         setEmploymentInfo(initialStateArr);
         setEmployment(initialState);
-        console.log(employment);
-        console.log(employmentInfo);
     }
     return (
         <div>

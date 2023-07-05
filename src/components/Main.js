@@ -49,10 +49,17 @@ function Main () {
         setEduInfo(updatedEduInfo);
     };
 
-    const onEdit = (e) => {
+    const onEduEdit = (e) => {
         const eduId = parseInt(e.target.id);
+        console.log(eduId)
         setEditState(eduId);
     }
+
+    const onEmploymentEdit = (e) => {
+        const employmentId = parseInt(e.target.id);
+        console.log(employmentId)
+        setEditState(employmentId);
+    };
 
     const handleEdit = (e) => {
         e.preventDefault();
@@ -68,8 +75,8 @@ function Main () {
             </div>
             <div className="previewWrapper">
             <PersonalInfoPreview personalInfo={personalInfo}/>
-            <EducationInfoPreview eduInfo={eduInfo} deleteClick={deleteEducation} onEdit={onEdit} handleEdit={handleEdit} editState={editState} education={education} setEduInfo={setEduInfo}/>
-            <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment}/>
+            <EducationInfoPreview eduInfo={eduInfo} deleteClick={deleteEducation} onEdit={onEduEdit} handleEdit={handleEdit} editState={editState} setEduInfo={setEduInfo}/>
+            <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment} onEdit={onEmploymentEdit} handleEdit={handleEdit} editState={editState} setEmploymentInfo={setEmploymentInfo}/>
             </div>
         </div>
 
