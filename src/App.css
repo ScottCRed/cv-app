@@ -8,6 +8,7 @@ body {
     justify-content: space-around;
     background-color: rgb(202, 202, 202);
     margin: 0px;
+    padding-top: 40px;
 }
 
 .formWrapper {
@@ -16,14 +17,15 @@ body {
     padding: 5px;
     width: 800px;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    border-radius: 10px;
 }
 
 .previewWrapper {
     background-color: rgb(241, 241, 241);
     margin: 5px;
-    padding: 5px;
     width: 800px;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    border-radius: 10px;
 }
 
 input {
@@ -149,4 +151,32 @@ h3 {
     overflow: visible;
     padding: 2px 24px;
     margin: 2px;
+}
+
+/* Headings */
+#header {
+    display: flex;
+    
+    align-items: center;
+    width: auto;
+    padding-left: 5%;
+    font-weight: 600;
+}
+
+.main {
+    background-color: #1d2d3a;
+    height: 150px;
+    color: rgb(241, 241, 241);
+    font-size: 100px;
+    text-align:left;
+}
+
+.secondary {
+    background-color: #305777;
+    height: 100px;
+    color: rgb(241, 241, 241);
+    font-size: 24px;
+    text-align:left;
+    border-radius: 5px;
+    margin: 0;
 }

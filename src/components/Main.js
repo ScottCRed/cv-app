@@ -6,6 +6,7 @@ import EducationInfoPreview  from "./EducationInfoPreview"
 import EmploymentInfoPreview from "./EmploymentInfoPreview";
 import { useState } from 'react';
 import Button from "./Button";
+import Header from "./Header";
 
 function Main () {
     const initialInfo = {
@@ -83,6 +84,8 @@ function Main () {
     }
 
     return (
+        <div>
+        <Header className="main" id="header" title="CV Creator"/>
         <div className="mainWrapper">
             <div className="formWrapper">
             <Personal personalInfo={personalInfo} setInfo={setInfo} />
@@ -91,11 +94,14 @@ function Main () {
             <Button onClick={reset} buttonText="Reset" buttonClass="btnReset" id="reset"/>
             </div>
             <div className="previewWrapper">
+            <Header className="secondary" id="header" title="Cirriculum Vitae"/>
             <PersonalInfoPreview personalInfo={personalInfo}/>
             <EducationInfoPreview eduInfo={eduInfo} deleteClick={deleteEducation} onEdit={onEduEdit} handleEdit={handleEduEdit} editState={editEduState} setEduInfo={setEduInfo}/>
             <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment} onEdit={onEmploymentEdit} handleEdit={handleEmployEdit} editState={editEmployState} setEmploymentInfo={setEmploymentInfo}/>
             </div>
         </div>
+        </div>
+
     )
 }
 
