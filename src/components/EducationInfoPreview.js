@@ -3,7 +3,7 @@ import Button from "./Button";
 import EditEducation from "./EditEducation";
 
 function EducationInfoPreview (props) {
-    const {eduInfo, deleteClick, editState, onEdit, handleEdit, education, setEduInfo} = props
+    const {eduInfo, deleteClick, editState, onEdit, handleEdit, setEduInfo} = props
     useEffect(() => {
 
     }, [eduInfo]);
@@ -11,7 +11,7 @@ function EducationInfoPreview (props) {
         <div>
           {eduInfo.map((item, index) => {
             return editState === index ?
-            <EditEducation  handleEdit={handleEdit} education={item} index={index} eduInfo={eduInfo} setEduInfo={setEduInfo}/> :
+            <EditEducation key="edit" handleEdit={handleEdit} education={item} index={index} eduInfo={eduInfo} setEduInfo={setEduInfo}/> :
               <div key={index} className="infoCard">     
                 <p key={"institution"}>Name of Institution: {item.institution}</p>
                 <p key={"address"}>Address of Institution: {item.institutionAddress}</p>
