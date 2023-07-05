@@ -8,23 +8,47 @@ function EducationInfoPreview (props) {
 
     }, [eduInfo]);
     return (
-        <div>
+        <div className="preview">
+          <h3>Education</h3>
           {eduInfo.map((item, index) => {
             return editState === index ?
             <EditEducation key="edit" handleEdit={handleEdit} education={item} index={index} eduInfo={eduInfo} setEduInfo={setEduInfo}/> :
-              <div key={index} className="infoCard">     
-                <p key={"institution"}>Name of Institution: {item.institution}</p>
-                <p key={"address"}>Address of Institution: {item.institutionAddress}</p>
-                <p key={"degree"}>Name of Degree: {item.degree}</p>
-                <p key={"majors"}>Major(s): {item.majors}</p>
-                <p key={"start"}>Start Date: {item.startDate}</p>
-                <p key={"end"}>End Date: {item.endDate}</p>
-                
-              <Button id={index} buttonText="Edit Institution" buttonClass="btnEdit" onClick={onEdit}/>
-              <Button id={index} buttonText="Delete Institution" buttonClass="btnDelete" onClick={deleteClick} />
+              <div key={index} className="infoCard"> 
+                <table className="previewTbl">
+                  <tbody>
+                    <tr>
+                      <td style={{'width': '35%'}}>Start Date: {item.startDate}</td>
+                      <td>{item.institution}, {item.institutionAddress} </td>
+                    </tr>
+                    <tr>
+                      <td>Completed: {item.endDate}</td>
+                      <td>Degree: {item.degree} in {item.majors} </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>Majors: {item.majors} </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <Button 
+                        id={index} 
+                        buttonText="Edit" 
+                        buttonClass="btnEdit" 
+                        onClick={onEdit}/>
+                        <Button 
+                        id={index} 
+                        buttonText="Delete" 
+                        buttonClass="btnDelete" 
+                        onClick={deleteClick} />
+                        </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>           
               </div>
             
           })}
+          <div className="line"/>
         </div>
       );
     }

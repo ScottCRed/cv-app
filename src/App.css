@@ -27,7 +27,7 @@ body {
 }
 
 .infoCard {
-    background-color: yellow;
+
 }
 
 input {
@@ -101,13 +101,50 @@ h3 {
     background-color: green;
 }
 
-.btnReset {
+.btnEdit, .btnUpdate {
+    background-color: orange;
+}
+
+.btnReset, .btnDelete {
     background-color: red;
 }
 
-.personalTbl {
+.previewTbl {
     color: #3c4043;
     margin-left: 50px;
-    border-bottom: 1px solid #3c4043;
     min-width: 700px;
+}
+
+.preview {
+}
+
+.line {
+    width: 88%;
+    border-bottom: solid 1px #3c4043;
+    margin: 50px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.btnEdit, .btnDelete {
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    border-radius: 14px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #f0f0f0;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 12px;
+    font-weight: 500;
+    height: 20px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    width: 100px;
+    overflow: visible;
+    padding: 2px 24px;
+    margin: 2px;
 }
