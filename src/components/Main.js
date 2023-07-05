@@ -8,7 +8,7 @@ import { useState } from 'react';
 import Button from "./Button";
 
 function Main () {
-    const [personalInfo, setInfo] = useState({
+    const initialInfo = {
         firstName: '',
         surname: '',
         title: '',
@@ -16,24 +16,25 @@ function Main () {
         phoneNo: '',
         email: '',
         age: '',
-    });
-
-    const [education, setEducation] = useState({
+    };
+    const initialEdu = {
         institution: '',
         institutionAddress: '',
         degree: '',
         majors: '',
         startDate: '',
         endDate: '',
-    });
-
-    const [employment, setEmployment] = useState({
+    };
+    const initialEmployment = {
         companyName: '',
         position: '',
         companyAddress: '',
         startDate: '',
         endDate: '',
-    });
+    };
+    const [personalInfo, setInfo] = useState(initialInfo);
+    const [education, setEducation] = useState(initialEdu);
+    const [employment, setEmployment] = useState(initialEmployment);
     const [eduInfo, setEduInfo] = useState([]);
     const [employmentInfo, setEmploymentInfo] = useState([]);
     const [editEduState, setEditEduState] = useState(-1);
@@ -71,6 +72,16 @@ function Main () {
     const handleEmployEdit = (e) => {
         e.preventDefault();
         setEditEmployState(-1);
+    };
+
+    function reset () {
+        setInfo(initialInfo);
+        setEducation(initialEdu);
+        setEmployment(initialEmployment);
+        setEduInfo([]);
+        setEmploymentInfo([]);
+        setEditEduState(-1);
+        setEditEmployState(-1);
     }
 
     return (
@@ -79,7 +90,7 @@ function Main () {
             <Personal personalInfo={personalInfo} setInfo={setInfo}/>
             <Education education={education} setEducation={setEducation} eduInfo={eduInfo} setEduInfo={setEduInfo}/>
             <Employment employment={employment} setEmployment={setEmployment} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/>
-            <Button onClick={()=> {console.log('hi')}} buttonText="Reset" buttonClass="btnReset" id="reset"/>
+            <Button onClick={reset} buttonText="Reset" buttonClass="btnReset" id="reset"/>
             </div>
             <div className="previewWrapper">
             <PersonalInfoPreview personalInfo={personalInfo}/>
