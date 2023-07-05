@@ -156,7 +156,6 @@ h3 {
 /* Headings */
 #header {
     display: flex;
-    
     align-items: center;
     width: auto;
     padding-left: 5%;
@@ -168,7 +167,6 @@ h3 {
     height: 150px;
     color: rgb(241, 241, 241);
     font-size: 100px;
-    text-align:left;
 }
 
 .secondary {
@@ -176,7 +174,18 @@ h3 {
     height: 100px;
     color: rgb(241, 241, 241);
     font-size: 24px;
-    text-align:left;
     border-radius: 5px;
     margin: 0;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    background-color: #1d2d3a;
+    height: 100px;
+    color: rgb(241, 241, 241);
+    font-size: 20px;
+    font-weight: 100;
 }

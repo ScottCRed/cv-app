@@ -7,6 +7,7 @@ import EmploymentInfoPreview from "./EmploymentInfoPreview";
 import { useState } from 'react';
 import Button from "./Button";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function Main () {
     const initialInfo = {
@@ -100,6 +101,7 @@ function Main () {
             <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment} onEdit={onEmploymentEdit} handleEdit={handleEmployEdit} editState={editEmployState} setEmploymentInfo={setEmploymentInfo}/>
             </div>
         </div>
+        <Footer className="footer" content="Created by Scott Carroll 2023"/>
         </div>
 
     )
