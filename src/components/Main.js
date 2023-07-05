@@ -15,7 +15,7 @@ function Main () {
         address: '',
         phoneNo: '',
         email: '',
-        date: '',
+        age: '',
     });
 
     const [education, setEducation] = useState({
