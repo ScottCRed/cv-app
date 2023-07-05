@@ -6,7 +6,11 @@ function PersonalInfoPreview(props) {
     let monthDiff = Date.now() - dob;
     let dateDiff = new Date(monthDiff);
     let year = dateDiff.getUTCFullYear();
-    let age = Math.abs(year-1970);
+    let age;
+
+    if (typeof age === 'number' && age > 0) {
+        age = Math.abs(year - 1970);
+      }
     return (
         <div>
             <p>First Name: {personalInfo.firstName}</p>
