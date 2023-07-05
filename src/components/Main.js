@@ -36,7 +36,8 @@ function Main () {
     });
     const [eduInfo, setEduInfo] = useState([]);
     const [employmentInfo, setEmploymentInfo] = useState([]);
-    const [editState, setEditState] = useState(-1);
+    const [editEduState, setEditEduState] = useState(-1);
+    const [editEmployState, setEditEmployState] = useState(-1);
 
     const deleteEmployment = (e) => {      
         const employmentId = parseInt(e.target.id);
@@ -53,18 +54,23 @@ function Main () {
     const onEduEdit = (e) => {
         const eduId = parseInt(e.target.id);
         console.log(eduId)
-        setEditState(eduId);
+        setEditEduState(eduId);
     }
 
     const onEmploymentEdit = (e) => {
         const employmentId = parseInt(e.target.id);
         console.log(employmentId)
-        setEditState(employmentId);
+        setEditEmployState(employmentId);
     };
 
-    const handleEdit = (e) => {
+    const handleEduEdit = (e) => {
         e.preventDefault();
-        setEditState(-1);
+        setEditEduState(-1);
+    };
+
+    const handleEmployEdit = (e) => {
+        e.preventDefault();
+        setEditEmployState(-1);
     }
 
     return (
@@ -77,8 +83,8 @@ function Main () {
             </div>
             <div className="previewWrapper">
             <PersonalInfoPreview personalInfo={personalInfo}/>
-            <EducationInfoPreview eduInfo={eduInfo} deleteClick={deleteEducation} onEdit={onEduEdit} handleEdit={handleEdit} editState={editState} setEduInfo={setEduInfo}/>
-            <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment} onEdit={onEmploymentEdit} handleEdit={handleEdit} editState={editState} setEmploymentInfo={setEmploymentInfo}/>
+            <EducationInfoPreview eduInfo={eduInfo} deleteClick={deleteEducation} onEdit={onEduEdit} handleEdit={handleEduEdit} editState={editEduState} setEduInfo={setEduInfo}/>
+            <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment} onEdit={onEmploymentEdit} handleEdit={handleEmployEdit} editState={editEmployState} setEmploymentInfo={setEmploymentInfo}/>
             </div>
         </div>
 
