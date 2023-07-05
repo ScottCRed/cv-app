@@ -25,7 +25,6 @@ function Main () {
         startDate: '',
         endDate: '',
     });
-    const [eduInfo, setEduInfo] = useState([]);
 
     const [employment, setEmployment] = useState({
         companyName: '',
@@ -34,7 +33,9 @@ function Main () {
         startDate: '',
         endDate: '',
     });
+    const [eduInfo, setEduInfo] = useState([]);
     const [employmentInfo, setEmploymentInfo] = useState([]);
+    const [editState, setEditState] = useState(-1);
 
     const deleteEmployment = (e) => {      
         const employmentId = parseInt(e.target.id);
@@ -46,6 +47,16 @@ function Main () {
         const eduId = parseInt(e.target.id);
         const updatedEduInfo = eduInfo.filter((employment, index) => index !==eduId);
         setEduInfo(updatedEduInfo);
+    };
+
+    const onEdit = (e) => {
+        const eduId = parseInt(e.target.id);
+        setEditState(eduId);
+    }
+
+    const handleEdit = (e) => {
+        e.preventDefault();
+        setEditState(-1);
     }
 
     return (
@@ -57,7 +68,7 @@ function Main () {
             </div>
             <div className="previewWrapper">
             <PersonalInfoPreview personalInfo={personalInfo}/>
-            <EducationInfoPreview eduInfo={eduInfo} deleteClick={deleteEducation}/>
+            <EducationInfoPreview eduInfo={eduInfo} deleteClick={deleteEducation} onEdit={onEdit} handleEdit={handleEdit} editState={editState} education={education} setEduInfo={setEduInfo}/>
             <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment}/>
             </div>
         </div>

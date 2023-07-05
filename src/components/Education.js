@@ -28,15 +28,11 @@ const Education = (props) => {
 
         setEduInfo(eduInfo.concat(education));
         setEducation(initialState);
-        console.log(eduInfo);
-        console.log(education);
     }
 
     function Clear () {
         setEduInfo(initialStateArr);
         setEducation(initialState);
-        console.log(eduInfo);
-        console.log(education);
     }
     return (
         <div>
