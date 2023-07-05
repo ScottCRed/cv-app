@@ -54,13 +54,11 @@ function Main () {
 
     const onEduEdit = (e) => {
         const eduId = parseInt(e.target.id);
-        console.log(eduId)
         setEditEduState(eduId);
     }
 
     const onEmploymentEdit = (e) => {
         const employmentId = parseInt(e.target.id);
-        console.log(employmentId)
         setEditEmployState(employmentId);
     };
 
@@ -87,7 +85,7 @@ function Main () {
     return (
         <div className="mainWrapper">
             <div className="formWrapper">
-            <Personal personalInfo={personalInfo} setInfo={setInfo}/>
+            <Personal personalInfo={personalInfo} setInfo={setInfo} />
             <Education education={education} setEducation={setEducation} eduInfo={eduInfo} setEduInfo={setEduInfo}/>
             <Employment employment={employment} setEmployment={setEmployment} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/>
             <Button onClick={reset} buttonText="Reset" buttonClass="btnReset" id="reset"/>
@@ -98,7 +96,6 @@ function Main () {
             <EmploymentInfoPreview employmentInfo={employmentInfo} deleteClick={deleteEmployment} onEdit={onEmploymentEdit} handleEdit={handleEmployEdit} editState={editEmployState} setEmploymentInfo={setEmploymentInfo}/>
             </div>
         </div>
-
     )
 }
 
