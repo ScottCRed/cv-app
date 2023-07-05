@@ -19,16 +19,15 @@ const Personal = (props) => {
       
     return (
         <div>
-          <h2>Personal Information</h2>
+          <h3>Personal Information</h3>
             <Input type='text' id='firstName' placeholder='First Name' onInfoChange={handleInfoChange}/>
             <Input type='text' id='surname' placeholder='Surname' onInfoChange={handleInfoChange}/>
             <Input type='text' id='title' placeholder='Title' onInfoChange={handleInfoChange}/>
+            <Input type='text' id='age' placeholder='Age' onDateChange={handleInfoChange}/>
             <Input type='text' id='address' placeholder='Address' onInfoChange={handleInfoChange}/>
             <Input type='text' id='phoneNo' placeholder='Phone Number' onInfoChange={handleInfoChange}/>
             <Input type='text' id='email' placeholder='Email Address' onInfoChange={handleInfoChange}/>
-            <Input type='text' id='notes' placeholder='Other Notes' onInfoChange={handleInfoChange}/>
-            <DateInput type='date' id='birthDate' placeholder='Birth Date' onDateChange={handleInfoChange}/>
-            <Button onClick={onClickOne} buttonText='Retrieve Info' buttonClass='addButton' id='1'/>
+            <Input type='text' id='notes' placeholder='Notes About Me' onInfoChange={handleInfoChange}/>
         </div>
 
     )

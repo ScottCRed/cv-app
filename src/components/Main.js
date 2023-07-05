@@ -5,6 +5,7 @@ import PersonalInfoPreview from "./PersonalInfoPreview"
 import EducationInfoPreview  from "./EducationInfoPreview"
 import EmploymentInfoPreview from "./EmploymentInfoPreview";
 import { useState } from 'react';
+import Button from "./Button";
 
 function Main () {
     const [personalInfo, setInfo] = useState({
@@ -72,6 +73,7 @@ function Main () {
             <Personal personalInfo={personalInfo} setInfo={setInfo}/>
             <Education education={education} setEducation={setEducation} eduInfo={eduInfo} setEduInfo={setEduInfo}/>
             <Employment employment={employment} setEmployment={setEmployment} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/>
+            <Button onClick={()=> {console.log('hi')}} buttonText="Reset" buttonClass="btnReset" id="reset"/>
             </div>
             <div className="previewWrapper">
             <PersonalInfoPreview personalInfo={personalInfo}/>
