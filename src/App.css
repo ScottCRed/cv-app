@@ -104,3 +104,10 @@ h3 {
 .btnReset {
     background-color: red;
 }
+
+.personalTbl {
+    color: #3c4043;
+    margin-left: 50px;
+    border-bottom: 1px solid #3c4043;
+    min-width: 700px;
+}

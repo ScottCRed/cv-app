@@ -2,25 +2,43 @@ import React from "react";
 
 function PersonalInfoPreview(props) {
     const {personalInfo} = props;
-    let dob = new Date(personalInfo.birthDate);
-    let monthDiff = Date.now() - dob;
-    let dateDiff = new Date(monthDiff);
-    let year = dateDiff.getUTCFullYear();
-    let age;
 
-    if (typeof age === 'number' && age > 0) {
-        age = Math.abs(year - 1970);
-      }
     return (
-        <div>
-            <p>First Name: {personalInfo.firstName}</p>
-            <p>Surname: {personalInfo.surname}</p>
-            <p>Title: {personalInfo.title}</p>
-            <p>Address: {personalInfo.address}</p>
-            <p>Phone Number: {personalInfo.phoneNo}</p>
-            <p>Email: {personalInfo.email}</p>
-            <p>Date of Birth: {personalInfo.birthDate}</p>
-            <p>Age: {age}</p>
+        <div className="personalInfoWrapper">          
+            <table className="personalTbl">
+                <thead><h3>Personal Information</h3></thead>
+                <tbody>
+                <tr>
+                    <td style={{'width': '30%'}}><b>First Name </b></td>
+                    <td>{personalInfo.firstName}</td>
+                </tr>
+                <tr>
+                    <td><b>Surname </b></td>
+                    <td>{personalInfo.surname}</td>
+                </tr>
+                <tr>
+                    <td><b>Title </b> </td>
+                    <td>{personalInfo.title}</td>
+                </tr>
+                <tr>
+                    <td><b>Age </b> </td>
+                    <td>{personalInfo.age}</td>
+                </tr>
+                <tr>
+                    <td><b>Address </b></td>
+                    <td>{personalInfo.address}</td>
+                </tr>
+                <tr>
+                    <td><b>Phone Number </b></td>
+                    <td>{personalInfo.phoneNo}</td>
+                </tr>
+                <tr>
+                    <td><b>Email </b></td>
+                    <td>{personalInfo.email}</td>
+                </tr>
+                </tbody>                
+            </table>
+            <div className="break"></div>
         </div>
     )
 }
