@@ -13,7 +13,14 @@ function EmploymentInfoPreview (props) {
       <h3>Employment</h3>
           {employmentInfo.map((item, index) => {
             return editState === index ?
-            <EditEmployment  key="edit" handleEdit={handleEdit} employment={item} index={index} employmentInfo={employmentInfo} setEmploymentInfo={setEmploymentInfo}/> :
+            <EditEmployment  
+            key="edit" 
+            handleEdit={handleEdit} 
+            employment={item} 
+            index={index} 
+            employmentInfo={employmentInfo} 
+            setEmploymentInfo={setEmploymentInfo}/> :
+            
               <div key={index} className="infoCard">
                 <table className="previewTbl">
                   <tbody>
